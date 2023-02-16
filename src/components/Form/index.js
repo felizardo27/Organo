@@ -1,6 +1,7 @@
 import './Form.css'
 import Input from '../Input'
 import DropDown from '../DropDown'
+import Button from '../Button'
 
 const Form = () => {
 
@@ -34,6 +35,7 @@ const Form = () => {
                 label="Time"
                 itens={itens}
             />
+            <Button>Criar Card</Button>
             </form>
         </section>
     )

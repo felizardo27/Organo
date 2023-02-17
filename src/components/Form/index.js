@@ -2,10 +2,11 @@ import './Form.css'
 import Input from '../Input'
 import DropDown from '../DropDown'
 import Button from '../Button'
+import { useState } from 'react'
 
 const Form = () => {
 
-    const itens = [
+    const times = [
         'Programação',
         'Front-End',
         'Data Science',
@@ -15,9 +16,14 @@ const Form = () => {
         'Inovação e Gestão'
     ]
 
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
+
     const aoSalvar = (e) => {
         e.preventDefault()
-        console.log("Form foi submetido")
+        console.log("Form foi submetido => ", nome, cargo, imagem, time)
     }
 
     return(
@@ -28,20 +34,28 @@ const Form = () => {
                 obrigatorio={true}
                 label="Nome" 
                 placeHolder="Digite o seu nome"
+                valor={nome}
+                aoAlterado={valor => {setNome(valor)}}
             /> 
             <Input 
                 obrigatorio={true}
                 label="Cargo" 
                 placeHolder="Digite o seu Cargo"
+                valor={cargo}
+                aoAlterado={valor => {setCargo(valor)}}
             /> 
             <Input 
                 label="Imagem" 
                 placeHolder="Informe o endereço da imagem"
+                valor={imagem}
+                aoAlterado={valor => setImagem(valor)}
             /> 
             <DropDown 
                 obrigatorio={true}
                 label="Time"
-                itens={itens}
+                itens={times}
+                valor={time}
+                aoAlterado={valor => setTime(valor)}
             />
             <Button>Criar Card</Button>
             </form>

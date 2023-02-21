@@ -1,3 +1,4 @@
+import Colaborador from '../Colaborador'
 import './Team.css'
 
 const Team = (props) => {
@@ -10,6 +11,7 @@ const Team = (props) => {
             <h3 style={{borderColor: props.corPrimaria}}>
                 {props.nome}
             </h3>
+            <Colaborador />
         </section>
     )
 }

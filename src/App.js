@@ -55,6 +55,7 @@ function App() {
       <Banner />
       <Form 
         colaboradorCadastrado={colaborador => novoColaborador(colaborador)}
+        times={times.map(time => time.nome)}
       />
 
       {times.map((time) => 

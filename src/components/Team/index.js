@@ -4,7 +4,7 @@ import './Team.css'
 const Team = (props) => {
     
     return(
-        <section 
+        (props.colaboradores.length > 0) ? <section 
             className='team'
             style={{backgroundColor: props.corSecundaria}}
         >
@@ -21,7 +21,7 @@ const Team = (props) => {
                 />
                 )}
             </div>
-        </section>
+        </section> : ''
     )
 }
 

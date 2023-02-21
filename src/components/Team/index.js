@@ -11,7 +11,16 @@ const Team = (props) => {
             <h3 style={{borderColor: props.corPrimaria}}>
                 {props.nome}
             </h3>
-            <Colaborador />
+            <div className='colaboradores'>
+                {props.colaboradores.map((colaborador, key) =>
+                <Colaborador
+                    key={key}
+                    nome={colaborador.nome}
+                    cargo={colaborador.cargo}
+                    imagem={colaborador.imagem}
+                />
+                )}
+            </div>
         </section>
     )
 }

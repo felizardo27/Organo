@@ -23,9 +23,7 @@ const Team = ({time, colaboradores, aoDeletar, mudarCor}) => {
                 {
                 return <Colaborador
                     key={key}
-                    nome={colaborador.nome}
-                    cargo={colaborador.cargo}
-                    imagem={colaborador.imagem}
+                    colaborador={colaborador}
                     corDeFundo={time.cor}
                     aoDeletar={aoDeletar}
                 />

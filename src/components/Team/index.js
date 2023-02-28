@@ -2,12 +2,18 @@ import Colaborador from '../Colaborador'
 import './Team.css'
 
 const Team = (props) => {
-    
     return(
-        (props.colaboradores.length > 0) ? <section 
+        (props.colaboradores.length > 0) ? 
+        <section 
             className='team'
             style={{backgroundColor: props.corSecundaria}}
         >
+            <input 
+                value={props.corSecundaria}
+                onChange={evento => props.mudarCor(evento.target.value, props.nome)}
+                type='color' 
+                className='input-color' 
+            />
             <h3 style={{borderColor: props.corPrimaria}}>
                 {props.nome}
             </h3>

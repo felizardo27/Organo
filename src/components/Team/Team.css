@@ -1,6 +1,7 @@
 .team {
     text-align: center;
     padding: 32px;
+    position: relative;
 }
 
 .team h3 {
@@ -16,4 +17,10 @@
     justify-content: space-around;
     margin-top: 32px;
     flex-wrap: wrap;
+}
+
+.input-color {
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }

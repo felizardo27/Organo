@@ -1,32 +1,33 @@
-import Colaborador from '../Colaborador'
 import './Team.css'
+import Colaborador from '../Colaborador'
+import hexToRgba from 'hex-to-rgba'
 
-const Team = (props) => {
+const Team = ({time, colaboradores, aoDeletar, mudarCor}) => {
     return(
-        (props.colaboradores.length > 0) ? 
+        (colaboradores.length > 0) ? 
         <section 
             className='team'
-            style={{backgroundColor: props.corSecundaria}}
+            style={{backgroundColor: hexToRgba(time.cor, '0.4')}}
         >
             <input 
-                value={props.corSecundaria}
-                onChange={evento => props.mudarCor(evento.target.value, props.nome)}
+                value={time.cor}
+                onChange={evento => mudarCor(evento.target.value, time.nome)}
                 type='color' 
                 className='input-color' 
             />
-            <h3 style={{borderColor: props.corPrimaria}}>
-                {props.nome}
+            <h3 style={{borderColor: time.cor}}>
+                {time.nome}
             </h3>
             <div className='colaboradores'>
-                {props.colaboradores.map((colaborador, key) =>
+                {colaboradores.map((colaborador, key) =>
                 {
                 return <Colaborador
                     key={key}
                     nome={colaborador.nome}
                     cargo={colaborador.cargo}
                     imagem={colaborador.imagem}
-                    corDeFundo={props.corPrimaria}
-                    aoDeletar={props.aoDeletar}
+                    corDeFundo={time.cor}
+                    aoDeletar={aoDeletar}
                 />
                 }
                 )}

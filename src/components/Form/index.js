@@ -38,21 +38,21 @@ const Form = (props) => {
         <section className="form">
             <form onSubmit={aoSalvar}>
             <h2>Preencha os dados para criar o card do colaborador.</h2>
-            <Input 
+            <Input
                 obrigatorio
                 label="Nome" 
                 placeHolder="Digite o seu nome"
                 valor={nome}
                 aoAlterado={valor => {setNome(valor)}}
             /> 
-            <Input 
+            <Input
                 obrigatorio
                 label="Cargo" 
                 placeHolder="Digite o seu Cargo"
                 valor={cargo}
                 aoAlterado={valor => {setCargo(valor)}}
             /> 
-            <Input 
+            <Input
                 label="Imagem" 
                 placeHolder="Informe o endereço da imagem"
                 valor={imagem}
@@ -70,14 +70,15 @@ const Form = (props) => {
             </form>
             <form onSubmit={criarTime}>
             <h2>Preencha os dados para criar um novo time.</h2>
-            <Input 
+            <Input
                 obrigatorio
                 label="Nome" 
                 placeHolder="Digite o nome do time"
                 valor={nomeTime}
                 aoAlterado={valor => {setNomeTime(valor)}}
             /> 
-            <Input 
+            <Input
+                type="color"
                 obrigatorio
                 label="Cor" 
                 placeHolder="Digite a cor do time"

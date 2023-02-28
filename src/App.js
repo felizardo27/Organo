@@ -235,12 +235,17 @@ function App() {
     }))
   }
 
+  const cadastrarTime = (nome, cor) => {
+    setTimes([...times, {id: uuidv4(), nome, cor}])
+  }
+
   return (
     <div>
       <Banner />
       <Form 
-        colaboradorCadastrado={colaborador => novoColaborador(colaborador)}
+        cadastrarTime={cadastrarTime}
         times={times.map(time => time.nome)}
+        colaboradorCadastrado={colaborador => novoColaborador(colaborador)}
       />
       <section className="times">
         <h1>Minha organização</h1>

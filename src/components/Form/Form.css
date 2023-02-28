@@ -5,6 +5,7 @@
 }
 
 .form form {
+    margin: 0 15px;
     max-width: 80%;
     background-color: #F2F2F2;
     border-radius: 20px;

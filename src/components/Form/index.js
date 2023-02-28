@@ -10,6 +10,8 @@ const Form = (props) => {
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
+    const [nomeTime, setNomeTime] = useState('')
+    const [corTime, setCorTime] = useState('')
 
     const aoSalvar = (e) => {
         e.preventDefault()
@@ -25,19 +27,26 @@ const Form = (props) => {
         setTime('')
     }
 
+    const criarTime = (e) => {
+        e.preventDefault()
+        props.cadastrarTime(nomeTime, corTime)
+        setNomeTime('')
+        setCorTime('')
+    }
+
     return(
         <section className="form">
             <form onSubmit={aoSalvar}>
             <h2>Preencha os dados para criar o card do colaborador.</h2>
             <Input 
-                obrigatorio={true}
+                obrigatorio
                 label="Nome" 
                 placeHolder="Digite o seu nome"
                 valor={nome}
                 aoAlterado={valor => {setNome(valor)}}
             /> 
             <Input 
-                obrigatorio={true}
+                obrigatorio
                 label="Cargo" 
                 placeHolder="Digite o seu Cargo"
                 valor={cargo}
@@ -50,13 +59,32 @@ const Form = (props) => {
                 aoAlterado={valor => setImagem(valor)}
             /> 
             <DropDown 
-                obrigatorio={true}
+                obrigatorio
                 label="Time"
                 itens={props.times}
                 valor={time}
                 aoAlterado={valor => setTime(valor)}
             />
             <Button>Criar Card</Button>
+
+            </form>
+            <form onSubmit={criarTime}>
+            <h2>Preencha os dados para criar um novo time.</h2>
+            <Input 
+                obrigatorio
+                label="Nome" 
+                placeHolder="Digite o nome do time"
+                valor={nomeTime}
+                aoAlterado={valor => {setNomeTime(valor)}}
+            /> 
+            <Input 
+                obrigatorio
+                label="Cor" 
+                placeHolder="Digite a cor do time"
+                valor={corTime}
+                aoAlterado={valor => {setCorTime(valor)}}
+            />  
+            <Button>Criar time</Button>
             </form>
         </section>
     )

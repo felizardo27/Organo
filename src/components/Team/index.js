@@ -2,7 +2,7 @@ import './Team.css'
 import Colaborador from '../Colaborador'
 import hexToRgba from 'hex-to-rgba'
 
-const Team = ({time, colaboradores, aoDeletar, mudarCor}) => {
+const Team = ({time, colaboradores, aoDeletar, mudarCor, aoFavoritar}) => {
     return(
         (colaboradores.length > 0) ? 
         <section 
@@ -26,6 +26,7 @@ const Team = ({time, colaboradores, aoDeletar, mudarCor}) => {
                     colaborador={colaborador}
                     corDeFundo={time.cor}
                     aoDeletar={aoDeletar}
+                    aoFavoritar={aoFavoritar}
                 />
                 }
                 )}

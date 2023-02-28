@@ -45,10 +45,39 @@ function App() {
     }
   ]
 
-  const [colaboradores, setColaboradores] = useState([])
+  const [colaboradores, setColaboradores] = useState([
+    {
+      nome: 'Paulo Silveira',
+      cargo: 'Instrutor',
+      imagem: 'https://github.com/peas.png',
+      time: 'Programação'
+    }, 
+    {
+      nome: 'Felizardo',
+      cargo: 'Estudante',
+      imagem: 'https://github.com/felizardo27.png',
+      time: 'Front-End'
+    }, 
+    {
+      nome: 'Vinicios Neves',
+      cargo: 'Instrutor',
+      imagem: 'https://github.com/viniciosneves.png',
+      time: 'Front-End'
+    }, 
+    {
+      nome: 'Felizardo',
+      cargo: 'Estudante',
+      imagem: 'https://github.com/felizardo27.png',
+      time: 'Mobile'
+    }, 
+  ])
 
   const novoColaborador = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
+  }
+
+  const deletarColaborador = () => {
+    console.log('deletando colaborador')
   }
 
   return (
@@ -58,16 +87,19 @@ function App() {
         colaboradorCadastrado={colaborador => novoColaborador(colaborador)}
         times={times.map(time => time.nome)}
       />
-
-      {times.map((time) => 
-        <Team 
-          key={time.nome} 
-          nome={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
-          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-        /> 
-      )}
+      <section className="teams">
+        <h1>Minha organização</h1>
+        {times.map((time) =>
+          <Team
+            key={time.nome}
+            nome={time.nome}
+            corPrimaria={time.corPrimaria}
+            corSecundaria={time.corSecundaria}
+            colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            aoDeletar={deletarColaborador}
+          />
+        )}
+      </section>
 
       <Rodape />
     </div>

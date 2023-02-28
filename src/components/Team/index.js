@@ -13,13 +13,16 @@ const Team = (props) => {
             </h3>
             <div className='colaboradores'>
                 {props.colaboradores.map((colaborador, key) =>
-                <Colaborador
+                {
+                return <Colaborador
                     key={key}
                     nome={colaborador.nome}
                     cargo={colaborador.cargo}
                     imagem={colaborador.imagem}
                     corDeFundo={props.corPrimaria}
+                    aoDeletar={props.aoDeletar}
                 />
+                }
                 )}
             </div>
         </section> : ''

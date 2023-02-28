@@ -17,3 +17,8 @@
     font-size: 24px;
     padding: 24px;
 }
+
+.color input {
+    height: 40px;
+    padding: 5px 24px;
+}

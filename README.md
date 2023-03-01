@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+<h1 align="center">
+  Organo
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  
+https://user-images.githubusercontent.com/72112006/222013770-3979137f-7507-4d1c-8746-6a4cf9053b94.mp4
+  
+</p>
 
-## Available Scripts
+## Descrição:
+Organo é um projeto que permite a gestão de organogramas para criar cards de colaboradores e gerenciar times. Com Organo, é possível criar, excluir e favoritar cards de colaboradores, além de criar e gerenciar times com cores personalizáveis.
 
-In the project directory, you can run:
 
-### `npm start`
+## Recursos
+* Criar novos cards de colaboradores com nome, cargo, URL da imagem e time
+* Visualizar uma lista de cards de colaboradores
+* Excluir um card de colaborador existente
+* Criar um novo time com nome e cor personalizável, inserida por meio de um input color.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
+* <img align="center" alt="HTML" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg">
+* <img align="center" alt="CSS" height="50" width="60" src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg">
+* <img align="center" alt="JAVASCRIPT" height="50" width="60" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg">
+* <img align="center" alt="REACT" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Como Executar o Projeto
+1. Baixe ou clone o repositório do projeto
+2. Abra o terminal na pasta raiz do projeto
+3. Execute o seguinte comando para instalar as dependências do projeto:
+```
+npm install
+```
+4. Execute o seguinte comando para iniciar o projeto::
+```
+npm start
+```
+5. bra seu navegador e acesse o endereço http://localhost:3000 para visualizar o projeto em execução.

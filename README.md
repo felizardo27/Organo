@@ -35,4 +35,4 @@ npm install
 ```
 npm start
 ```
-5. bra seu navegador e acesse o endereço http://localhost:3000 para visualizar o projeto em execução.
+5. Abra seu navegador e acesse o endereço http://localhost:3000 para visualizar o projeto em execução.
